@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <style>
+        .container {
+            text-align: center;
+            background-color: darkgray;
+            min-height: 800px;
+            max-width: 800px;
+            margin-top: 30px;
+        }
+
+        .btn-lg {
+  width: 100px;
+  height: 50px;
+}
+    </style>
+
+
+
+
+
+</head>
+
+<body style="background-color: black;">
+
+
+
+    <form>
+        <div style="font-weight: bold;">
+        <div class="container" >
+            <h1 style="text-align: center;color: rgb(0, 0, 0); font-weight: bold; ">Calculator</h1>
+            <div class="form-group">
+                <label for="Number1">Number1</label>
+                <input type="number" class="form-control" id="Number1"  style="text-align: center; "placeholder="Number">
+              </div>
+              <hr/>
+            <div class="form-group">
+                <label for="Number2" >Number2</label>
+                <input type="number" class="form-control" id="Number2"  style="text-align: center; "placeholder="Number">
+            </div>
+            <hr>
+            <div class="form-group">
+                <label for="Number3" >Result</label>
+                <input type="number" class="form-control" id="Number3" style="text-align: center;" placeholder="Result" readonly>
+            </div>
+            <hr/>
+            
+          
+            <br>
+            <button type="button" onclick="sum()" class="btn btn-success btn-lg">+</button>
+            <button type="button" onclick="subtract()" class="btn btn-danger btn-lg">-</button>
+            <button type="button" onclick="multiply()" class="btn btn-warning btn-lg">*</button>
+            <button type="button" onclick="divide()" class="btn btn-info btn-lg">/</button>
+             <br>
+             <br>
+             <br>
+             <P>
+                This is a simple calculator web application built using HTML, CSS, and JavaScript. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. The user can input two numbers and select an operation using the corresponding button. The result is displayed in a third input field, which is automatically updated when the user changes the input values or selects a different operation. The calculator is designed using the Bootstrap framework and has a simple and intuitive user interface.
+             </P>
+       
+        </div>
+    </div>
+    </form>
+
+
+    <script>
+
+const num1Input = document.getElementById('Number1');
+const num2Input = document.getElementById('Number2');
+const resultInput = document.getElementById('Number3');
+let currentOperation = '+';
+
+function calculateResult() {
+    const num1 = parseFloat(num1Input.value);
+    const num2 = parseFloat(num2Input.value);
+    let result = 0;
+    
+    switch (currentOperation) {
+        case '+':
+            result = num1 + num2;
+            break;
+        case '-':
+            result = num1 - num2;
+            break;
+        case '*':
+            result = num1 * num2;
+            break;
+        case '/':
+            result = num1 / num2;
+            break;
+        default:
+            break;
+    }
+    
+    resultInput.value = result;
+}
+
+num1Input.addEventListener('input', calculateResult);
+num2Input.addEventListener('input', calculateResult);
+
+function sum() {
+    currentOperation = '+';
+    calculateResult();
+}
+
+function subtract() {
+    currentOperation = '-';
+    calculateResult();
+}
+
+function multiply() {
+    currentOperation = '*';
+    calculateResult();
+}
+
+function divide() {
+    currentOperation = '/';
+    calculateResult();
+}
+
+
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
