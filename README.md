@@ -1,1 +1,3 @@
 # Calculator
+This is a simple calculator web application built using HTML, CSS, and JavaScript. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. The user can input two numbers and select an operation using the corresponding button. The result is displayed in a third input field, which is automatically updated when the user changes the input values or selects a different operation. The calculator is designed using the Bootstrap framework and has a simple and intuitive user interface.
+![Screenshot 2023-03-31 152749](https://user-images.githubusercontent.com/125591063/229120043-9806d3b3-efec-4892-914e-1d60c7f3f523.jpg)
